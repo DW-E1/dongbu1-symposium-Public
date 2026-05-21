@@ -342,6 +342,7 @@ async function loadData(){
   try{
     const r=await fetch(GH_API,{headers:{Authorization:`token ${token}`,Accept:'application/vnd.github.v3+json'}});
     if(r.status===401){setToken('');showTokenScreen('토큰이 만료됐습니다. 다시 입력해주세요.',true);return;}
+    if(r.status===403){setToken('');showTokenScreen('토큰 권한 오류. 다시 입력해주세요.',true);return;}
     if(r.status===404){
       data=SEED; await pushData(data,'');
     } else if(r.ok){
