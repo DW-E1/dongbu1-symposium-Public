@@ -126,7 +126,13 @@
         "p": "최진혁",
         "c": "365플러스내과",
         "d": "유정선",
-        "st": "reserved"
+        "st": "confirmed",
+        "checks": {
+          "0": true,
+          "1": true,
+          "2": true,
+          "3": true
+        }
       },
       {
         "p": "소민섭",
